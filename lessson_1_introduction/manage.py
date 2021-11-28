@@ -13,3 +13,8 @@ Dict = {
     'language': "javaScript"
 }
 print(List)
+
+let = "something"
+
+ # print(3 + let) # error
+print(str(3) + let)
