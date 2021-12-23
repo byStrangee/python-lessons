@@ -18,3 +18,8 @@ let = "something"
 
  # print(3 + let) # error
 print(str(3) + let)
+
+import requests
+url = "https://english-tester-nu.vercel.app/"
+page = requests.get(url)
+print(page.text)
