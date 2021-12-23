@@ -1,0 +1,10 @@
+{'name': 'Jason Hunter', 'age': 68, 'salary': '715 $'}
+{'name': 'Melinda Ward', 'age': 22, 'salary': '812 $'}
+{'name': 'Paul Bradley', 'age': 72, 'salary': '541 $'}
+{'name': 'Cynthia Schroeder', 'age': 69, 'salary': '189 $'}
+{'name': 'James Jackson', 'age': 60, 'salary': '491 $'}
+{'name': 'Ethan Delacruz', 'age': 69, 'salary': '372 $'}
+{'name': 'Timothy Andersen', 'age': 104, 'salary': '662 $'}
+{'name': 'Ryan Saunders', 'age': 78, 'salary': '999 $'}
+{'name': 'Jennifer Beard', 'age': 59, 'salary': '408 $'}
+{'name': 'Kimberly Moore', 'age': 36, 'salary': '380 $'}
