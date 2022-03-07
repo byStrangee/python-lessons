@@ -26,7 +26,7 @@ def write_date(table, values):
 # auth.sign_in_with_email_and_password(email, password)
 
 def get_data(table):
-
+    pass
 
 data = {
     "name": 'Apple',
