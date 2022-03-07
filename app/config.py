@@ -11,6 +11,8 @@ import pyrebase
 #     "databaseURL": "https://fruitbase-93215-default-rtdb.firebaseio.com/"
 # }
 
+API_TOKEN = "5217489121:AAE4Ka_ac9L_q3iWUhr7Sh_TyoQittjNqaQ"
+
 config = {
     "apiKey": "AIzaSyC3HqqAvbfuFuKI4p4SZgsr9j_WbaBsZqM",
     "authDomain": "testing-3407d.firebaseapp.com",

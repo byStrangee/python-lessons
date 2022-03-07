@@ -1,5 +1,4 @@
 from config import auth, db
-import _cipher
 import json
 
 
@@ -10,7 +9,7 @@ def sign_up(email, password):
         print('succesfully registered')    
         return True
     except Exception as err:
-        print('Error with connection')
+        print(err)
         return False
 
 def write_data(table, values):
@@ -24,7 +23,7 @@ def write_data(table, values):
 def get_data(table):
     try:
         d = db.child(table).get()
-        return b.val()
+        return d.val()
     except Exception as err:
         return err
     
@@ -42,11 +41,10 @@ def sign_in(email, password):
         print(_errmessage)
         return {"err": _errmessage, "errno": _errno}
     
-def add_new_user(email, password):
+def add_new_user(email, password, _id):
     user = sign_up(email, password)
     if user:
-        name = _cipher.crypt(email)
-        write_data(name, {"email": email})
+        write_data(_id, {"email": email})
     else:
         print('ERROR')
         return False
@@ -54,5 +52,10 @@ def add_new_user(email, password):
 def login(email, password):
     user = sign_in(email, password)
     if user:
-        
-    
+        w = _cipher.crypt(email)
+        return db.child(w)
+        # name = get_data(w)
+        # for i, k in name.items():
+        #     print(i, k)
+    else:
+        return "Email or password incorrect"
