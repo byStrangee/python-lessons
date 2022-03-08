@@ -14,7 +14,7 @@ def sign_up(email, password):
 
 def write_data(table, values):
     try:
-        db.child(table).set(values)
+        db.child(table).update(values)
         return True
     except Exception as err:
         print(err)
@@ -41,21 +41,18 @@ def sign_in(email, password):
         print(_errmessage)
         return {"err": _errmessage, "errno": _errno}
     
-def add_new_user(email, password, _id):
+def add_new_user(email, password, _id, _data):
     user = sign_up(email, password)
     if user:
-        write_data(_id, {"email": email})
+        write_data(_id, _data)
+        return True
     else:
         print('ERROR')
         return False
     
-def login(email, password):
+def login(email, password, _id):
     user = sign_in(email, password)
     if user:
-        w = _cipher.crypt(email)
-        return db.child(w)
-        # name = get_data(w)
-        # for i, k in name.items():
-        #     print(i, k)
+        return db.child(_id)
     else:
         return "Email or password incorrect"
